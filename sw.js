@@ -1,4 +1,4 @@
-var version = "v0.1";
+var version = "v0.11";
 var urlsToPrefetch = [
         'index.html'
         , 'app.js'
