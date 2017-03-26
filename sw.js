@@ -3,13 +3,13 @@ var urlsToPrefetch = [
         'index.html'
         , 'app.js'
         , 'manifest.json'
-        , '//images'
-        , '//images/icons'
-        , '//images/icons/192x192.png'
-        , '//images/icons/144x144.png'
-        , '//images/icons/96x96.png'
-        , '//images/icons/72x72.png'
-        , '//images/icons/48x48.png'
+        , './/images'
+        , './/images/icons'
+        , './/images/icons/192x192.png'
+        , './/images/icons/144x144.png'
+        , './/images/icons/96x96.png'
+        , './/images/icons/72x72.png'
+        , './/images/icons/48x48.png'
     ];
 self.addEventListener('install', function (event) {
     event.waitUntil(caches.open(version).then(function (cache) {
