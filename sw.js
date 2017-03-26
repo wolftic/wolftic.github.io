@@ -3,8 +3,6 @@ var urlsToPrefetch = [
         'index.html'
         , 'app.js'
         , 'manifest.json'
-        , 'images'
-        , 'images/icons'
         , 'images/icons/192x192.png'
         , 'images/icons/144x144.png'
         , 'images/icons/96x96.png'
