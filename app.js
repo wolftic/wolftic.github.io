@@ -26,7 +26,7 @@ if ('serviceWorker' in navigator) {
 }
 
 function log() {
-    document.body.appendChild(document.createTextNode(Array.prototype.join.call(arguments, ", ") + '\n'));
+  document.body.appendChild(document.createTextNode(Array.prototype.join.call(arguments, ", ") + '\n'));
     console.log.apply(console, arguments);
 }
 
@@ -43,7 +43,9 @@ function updateReady(worker) {
 }
 
 function trackInstalling(worker) {
+    log("tracking installation");
     worker.addEventListener('statechange', function () {
+        log(worker.state);
         if (worker.state == 'installed') {
             updateReady(worker);
         }

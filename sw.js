@@ -1,4 +1,4 @@
-var version = "v0.11";
+var version = "v0.2";
 var urlsToPrefetch = [
         'index.html'
         , 'app.js'
@@ -19,7 +19,7 @@ self.addEventListener('install', function (event) {
 self.addEventListener('activate', function (event) {
     event.waitUntil(caches.keys().then(function (cacheNames) {
         return Promise.all(cacheNames.map(function (cacheName) {
-            if (version != cacheName) { //if (version.indexOf(cacheName) == -1) {
+            if (version.indexOf(cacheName) == -1) {
                 console.log('Deleting out of date cache:', cacheName);
                 return caches.delete(cacheName);
             }
