@@ -7,14 +7,17 @@ if ('serviceWorker' in navigator) {
         if (!navigator.serviceWorker.controller) {
             return;
         }
+        console.log("test");
         if (reg.waiting) {
             updateReady(reg.waiting);
             return;
         }
+        console.log("test2");
         if (reg.installing) {
             trackInstalling(reg.installing);
             return;
         }
+        console.log("test3");
         reg.addEventListener('updatefound', function () {
             trackInstalling(reg.installing);
         })
