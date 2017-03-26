@@ -21,6 +21,10 @@ if ('serviceWorker' in navigator) {
         reg.addEventListener('updatefound', function () {
             trackInstalling(reg.installing);
         })
+        setInterval(function() {
+            console.log("Checking for Update!");
+            reg.update();
+        }, 5000);
     }).catch(function (error) {
         log('Registration failed with ' + error);
     });
