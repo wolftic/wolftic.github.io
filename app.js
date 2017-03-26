@@ -1,4 +1,4 @@
-var self = this;
+var self = this;//
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js', {
         scope: './'
